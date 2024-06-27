@@ -121,6 +121,7 @@ input {
 	font-size: 2rem;
 	margin-bottom: 0.5em;
 	background-color: var(--gray);
+	font-family: Barlow Condensed, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 input::placeholder {
