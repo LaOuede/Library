@@ -1,0 +1,172 @@
+:root {
+	--dark-blue: rgb(4, 19, 39);
+	--blue: rgb(7, 30, 61);
+	--light-blue: rgba(33, 230, 193);
+	--gray: rgba(255, 255, 255, 0.67);
+	--hover: rgba(255, 255, 255, 0.38);
+	--border-radius: 4px;
+	--shadow: var(--light-blue) 1.5px 2px 6px;
+  }
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: grid;
+	grid-template: 1fr 10fr 1fr / 1fr;
+}
+
+header {
+	display: grid;
+	align-items: center;
+	height: 100%;
+	background-color: var(--dark-blue);
+	font-family: Bebas Neue;
+	color: var(--light-blue);
+	padding-left: 1rem;
+}
+
+.content {
+	display: grid;
+	grid-template: 1fr 10fr / 1fr;
+	align-items: center;
+	justify-items: center;
+	background-color: var(--blue);
+}
+
+.button {
+	justify-self: right;
+	padding-right: 1rem;
+}
+
+.addBtn, .confirmBtn, .cancelBtn {
+	font-family: Bebas Neue;
+	font-size: 1.5rem;
+	padding: 0.5em;
+	border: 1px solid var(--light-blue);
+	background-color: transparent;
+	border-radius: var(--border-radius);
+	color: var(--light-blue)
+}
+
+.addBtn:hover, .confirmBtn:hover, .cancelBtn:hover {
+	cursor: pointer;
+	border-radius: var(--border-radius);
+	background-color: var(--hover);
+}
+
+.myBooks {
+	width: 90%;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); 
+	list-style-type: none;
+	gap: 15px;
+}
+
+.book {
+	padding: 30px;
+	border-radius: var(--border-radius);
+	background-color: var(--blue);
+	text-align: center;
+	color: var(--gray);
+	font-family: Barlow Condensed, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	box-shadow: var(--shadow);
+}
+
+#btnRead, #btnDel {
+	margin: 10px;
+	padding: 10px 20px 10px 20px;
+	font-family: Bebas Neue;
+	font-size: 1rem;
+	border: 1px solid;
+	background-color: transparent;
+	border-radius: var(--border-radius);
+	color: rgba(33, 230, 193, 0.7)
+}
+
+#btnRead:hover, #btnDel:hover {
+	cursor: pointer;
+	border-radius: var(--border-radius);
+	background-color: var(--hover);
+	color: rgba(33, 230, 193, 1)
+}
+
+.dialog-open .content {
+	filter: blur(5px);
+}
+
+#dialog {
+	padding: 30px;
+	border-radius: var(--border-radius);
+	background-color: var(--blue);
+	text-align: center;
+	color: var(--gray);
+	font-family: Barlow Condensed, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	border: 1px solid var(--light-blue);
+	box-shadow: var(--shadow);
+
+}
+
+#dialog legend {
+	font-size: 2rem;
+	color: var(--light-blue);
+	font-family: Bebas Neue, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin-bottom: 1rem;
+}
+
+input {
+	font-size: 2rem;
+	margin-bottom: 0.5em;
+	background-color: var(--gray);
+}
+
+input::placeholder {
+	font-style: italic;
+	font-size: 1.5rem;
+	opacity: 1;
+	font-family: Barlow Condensed, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+label {
+	font-family: Barlow Condensed, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer {
+	text-align: center;
+	background-color: var(--dark-blue);
+	color: var(--light-blue);
+}
+
+.credits {
+	font-family: Barlow Condensed, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.odin {
+	font-family: Bebas Neue, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bebas-neue-regular {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.barlow-condensed-regular {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+.fa-github {
+	color: var(--light-blue);
+	font-size: 24px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+	transform: rotate(360deg) scale(1.2);
+}

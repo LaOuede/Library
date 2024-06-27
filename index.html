@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+	<script src="script.js" defer></script>
+	<style>@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bebas+Neue&display=swap');</style>
+	<title>Library</title>
+</head>
+<body>
+	<header>
+		<h1>My Library</h1>
+	</header>
+
+	<div class="content">
+		<div class="button">
+			<button class="addBtn">+ New book</button>
+		</div>
+		<div class="myBooks"></div>
+		<div class="addBook">
+			<dialog id="dialog">
+				<form id="newBook">
+					<legend>Add a new book</legend>
+					<div>
+						<input type="text" title="title" id="title" placeholder="Title" required>
+					</div>
+					<div>
+						<input type="text" author="author" id="author" placeholder="Author" required>
+					</div>
+					<div>
+						<input type="number" pages="pages" id="pages" placeholder="Number of pages">
+					</div>
+					<div>
+						<label for="read">Already read?</label>
+						<input type="checkbox" read="read" id="read">
+					</div>
+					<div>
+						<button class="confirmBtn" value="default">Confirm</button>
+						<button formmethod="dialog" class="cancelBtn" value="cancel">Cancel</button>
+					</div>
+				</form>
+			</dialog>
+		</div>
+	</div>
+
+	<footer>
+		<p class="credits">Copyright © 
+			<script>document.write(new Date().getFullYear())</script>
+			- LaOuede 
+			<a href="https://github.com/LaOuede" target="_blank"><i class="fab fa-github"></i></a>
+		</p>
+		<p class="odin">The Odin Project</p>
+	</footer>
+
+	</body>
+</html>
