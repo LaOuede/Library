@@ -9,12 +9,11 @@ const dialog = document.querySelector('#dialog');
 const output = document.querySelector('output');
 const btnDel = document.querySelector('.btnDel');
 
-function Book(title, author, pages, read, review) {
+function Book(title, author, pages, read) {
 	this.title = title;
 	this.author = author;
 	this.pages = pages;
 	this.read = read;
-	this.review = review;
 
 	this.info = function() {
 		let infos = `<b>${title}</b><br>by<br><b>${author}</b><br><br>${pages} pages<br><br>`;
@@ -26,8 +25,8 @@ function Book(title, author, pages, read, review) {
 	}
 };
 
-function addBookToLibrary(title, author, pages, read, review) {
-	const newBook = new Book(title, author, pages, read, review);
+function addBookToLibrary(title, author, pages, read) {
+	const newBook = new Book(title, author, pages, read);
 	myLibrary.push(newBook);
 	renderLibrary();
 }
@@ -77,9 +76,8 @@ confirmBtn.addEventListener('click', (event) => {
 	const author = document.querySelector('#author').value;
 	const pages = document.querySelector('#pages').value;
 	const read = document.querySelector('#read').checked;
-	const review = document.querySelector('#review').value;
 	
-	addBookToLibrary(title, author, pages, read, review);
+	addBookToLibrary(title, author, pages, read);
 	
 	console.log(myLibrary);
 	dialog.close();
