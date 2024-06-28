@@ -69,14 +69,15 @@ const createButton = (text, id, index) => {
 	return button;
 }
 
-confirmBtn.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
 	event.preventDefault();
 
 	const title = document.querySelector('#title').value;
 	const author = document.querySelector('#author').value;
-	const pages = document.querySelector('#pages').value;
+	let pages = document.querySelector('#pages').value;
 	const read = document.querySelector('#read').checked;
-	
+
+	pages = (!pages) ? '-' : pages;
 	addBookToLibrary(title, author, pages, read);
 	
 	console.log(myLibrary);
